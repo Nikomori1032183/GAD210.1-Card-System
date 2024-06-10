@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public abstract class Card : MonoBehaviour
 {
-    protected string cardName;
+    public bool visible = false;
+    [SerializeField] protected string cardName;
 
-    protected Text nameText;
-    protected Image cardImage;
+    [SerializeField] protected TMP_Text nameText;
+    [SerializeField] protected Image cardImage;
 
     protected void Start()
     {
@@ -24,12 +26,14 @@ public abstract class Card : MonoBehaviour
 
     public void EnableCard()
     {
+        visible = true;
         nameText.enabled = true;
         cardImage.enabled = true;
     }
 
     public void DisableCard()
     {
+        visible = false;
         nameText.enabled = false;
         cardImage.enabled = false;
     }

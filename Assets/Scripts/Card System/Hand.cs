@@ -25,9 +25,12 @@ public class Hand : CardCollection
 
     public void DrawCard()
     {
-        AddCard(Deck.current.GetTopCard());
+        Instantiate(CardLibrary.current.emptyCardPrefab, Hand.current.transform);
+        AudioManager.current.DrawSFX();
 
-        Deck.current.RemoveTopCard();
+        //AddCard(Deck.current.GetTopCard());
+
+        //Deck.current.RemoveTopCard();
     }
 
     public void DiscardCard(Card card)

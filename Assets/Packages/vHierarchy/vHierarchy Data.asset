@@ -15,6 +15,7 @@ MonoBehaviour:
   sceneDatasByGuid:
     keys:
     - 2cda990e2423bbf4892e6590ba056729
+    - 
     values:
     - goDatasByGlobalId:
         keys:
@@ -23,6 +24,7 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-2cda990e2423bbf4892e6590ba056729-565346809-0
         - GlobalObjectId_V1-2-2cda990e2423bbf4892e6590ba056729-532350978-0
         - GlobalObjectId_V1-2-2cda990e2423bbf4892e6590ba056729-130503621-0
+        - GlobalObjectId_V1-2-2cda990e2423bbf4892e6590ba056729-1697334382-0
         values:
         - iColor: 9
           icon: Camera Icon
@@ -34,8 +36,10 @@ MonoBehaviour:
           icon: AudioEchoFilter Icon
         - iColor: 8
           icon: AudioSource Icon
+        - iColor: 8
+          icon: Folder Icon
       goDatasByInstanceId:
-        keys: 2c7a0000547a00003a7a0000347a0000ec8effff
+        keys: 2c7a0000547a00003a7a0000347a0000ec8effff22c100006ec1000030c100002ac1000006c100000855feff
         values:
         - iColor: 9
           icon: Camera Icon
@@ -47,3 +51,21 @@ MonoBehaviour:
           icon: AudioEchoFilter Icon
         - iColor: 8
           icon: AudioSource Icon
+        - iColor: 9
+          icon: Camera Icon
+        - iColor: 2
+          icon: Canvas Icon
+        - iColor: 5
+          icon: EventSystem Icon
+        - iColor: 8
+          icon: AudioEchoFilter Icon
+        - iColor: 8
+          icon: AudioSource Icon
+        - iColor: 8
+          icon: Folder Icon
+    - goDatasByGlobalId:
+        keys: []
+        values: []
+      goDatasByInstanceId:
+        keys: 
+        values: []

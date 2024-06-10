@@ -4,14 +4,15 @@ using UnityEngine;
 
 public abstract class CardCollection : MonoBehaviour
 {
-    protected List<Card> cardList;
+    public List<Card> cardList;
     
     public virtual void AddCard(Card card)
     {
         Debug.Log("Card Added");
 
         cardList.Add(card);
-        card.transform.parent = transform;
+        
+        card.transform.SetParent(transform);
     }
 
     public virtual void RemoveCard(Card card)
@@ -20,6 +21,17 @@ public abstract class CardCollection : MonoBehaviour
         if (cardList.Contains(card))
         {
             cardList.Remove(card);
+        }
+    }
+
+    public void DisableCards()
+    {
+        foreach (Card card in cardList)
+        {
+            if (card.visible)
+            {
+                card.DisableCard();
+            }
         }
     }
 }

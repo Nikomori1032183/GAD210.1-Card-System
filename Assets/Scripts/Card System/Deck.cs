@@ -11,6 +11,11 @@ public class Deck : CardCollection
         current = this;
     }
 
+    private void Start()
+    {
+        DisableCards();
+    }
+
     public Card GetTopCard()
     {
         return cardList[cardList.Count - 1];
