@@ -6,6 +6,8 @@ public class Hand : CardCollection
 {
     public static Hand current;
 
+    int cardCount = 0;
+
     private void Awake()
     {
         current = this;
@@ -25,7 +27,12 @@ public class Hand : CardCollection
 
     public void DrawCard()
     {
-        Instantiate(CardLibrary.current.emptyCardPrefab, Hand.current.transform);
+        if (cardCount <= 10)
+        {
+            Instantiate(CardLibrary.current.emptyCardPrefab, Hand.current.transform);
+            cardCount++;
+        }
+        
         AudioManager.current.Play();
 
         //AddCard(Deck.current.GetTopCard());
