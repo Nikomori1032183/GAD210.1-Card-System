@@ -26,7 +26,7 @@ public class Hand : CardCollection
     public void DrawCard()
     {
         Instantiate(CardLibrary.current.emptyCardPrefab, Hand.current.transform);
-        AudioManager.current.DrawSFX();
+        AudioManager.current.Play();
 
         //AddCard(Deck.current.GetTopCard());
 

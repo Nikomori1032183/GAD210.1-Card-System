@@ -7,9 +7,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager current;
 
     public AudioClip drawNoise;
-    public AudioClip hoverNoise;
-    public AudioClip selectNoise;
-    public AudioClip playNoise;
+    public AudioClip drawNoise2;
 
     private AudioSource audioSource;
 
@@ -23,11 +21,32 @@ public class AudioManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public void DrawSFX()
+    public void Play()
     {
-        audioSource.clip = drawNoise;
         audioSource.Play();
     }
 
-    
+    public void DrawSFX1()
+    {
+        audioSource.clip = drawNoise;
+        audioSource.pitch = 1f;
+    }
+
+    public void DrawSFX2()
+    {
+        audioSource.clip = drawNoise;
+        audioSource.pitch = 0.75f;
+    }
+
+    public void DrawSFX3()
+    {
+        audioSource.clip = drawNoise2;
+        audioSource.pitch = 1f;
+    }
+
+    public void DrawSFX4()
+    {
+        audioSource.clip = drawNoise2;
+        audioSource.pitch = 0.75f;
+    }
 }
